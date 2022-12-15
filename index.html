@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISS Project</title>
+  </head>
+  <body>
+    <h1>ISS Project</h1>
+    <p>by william baaklini and houssein massri</p>
+    <hr />
+    <h2>Encrypt</h2>
+    <form action="encrypt.php" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" required />
+      <select name="mode" required>
+        <option value="0" selected>aes-256-cbc</option>
+        <option value="1">aes-192-cbc</option>
+        <option value="2">aes-128-cbc</option>
+      </select>
+      <button type="submit">Encrypt</button>
+    </form>
+    <hr />
+    <h2>Decrypt</h2>
+    <form action="decrypt.php" method="post" enctype="multipart/form-data">
+      <input type="text" name="key" placeholder="key" required />
+      <input type="text" name="iv" placeholder="iv" required />
+      <input type="file" name="enc" required />
+      <select name="mode" required>
+        <option value="0" selected>aes-256-cbc</option>
+        <option value="1">aes-192-cbc</option>
+        <option value="2">aes-128-cbc</option>
+      </select>
+      <button type="submit">Decrypt</button>
+    </form>
+  </body>
+</html>
